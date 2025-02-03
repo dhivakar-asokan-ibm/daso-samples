@@ -1,0 +1,18 @@
+kind: api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: PaymentsAPI
+  namespace: daso
+  version: alpha
+  tags:
+    - one
+    - two
+    - three
+  type: REST
+spec:
+  mocked: true
+  api-spec:
+    # $path: api/spec/petstore.yaml
+    $path: ../spec/petstore.yaml
+  policy-sequence:
+    - $ref: daso:policyseq:alpha

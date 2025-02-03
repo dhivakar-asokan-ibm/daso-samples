@@ -1,0 +1,17 @@
+kind: api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: ServiceManagement
+  namespace: daso
+  version: alpha
+  tags:
+    - one
+    - two
+    - three
+  type: REST
+spec:
+  mocked: false
+  api-spec:
+    $path: spec.json
+  policy-seq: 
+    - $ref: daso:policyseq:alpha
