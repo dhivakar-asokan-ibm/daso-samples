@@ -1,7 +1,0 @@
-#kind:Tuple
-#metadata:
-# name: petstoreendpoint
-# version: 1.0
-# namespace: sample
-#spec:
-#  value: http://petstore.swagger.io
