@@ -1,0 +1,12 @@
+kind: Transport
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: transport
+  namespace: daso
+  version: alpha
+  tags:
+    - log_invocation
+spec: 
+    protocol:
+      - http
+      - https

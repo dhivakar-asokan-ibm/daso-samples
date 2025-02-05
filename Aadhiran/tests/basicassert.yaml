@@ -1,0 +1,20 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: basicassert
+  version: alpha
+  namespace: daso
+  tags:
+    - payEnv
+spec:
+  - name: "Validate the response status"
+    key: ${response.statusCode}
+    value: 401
+  - name: "Validate the response status"
+    key: ${var1}
+    value: 401  
+    action: "equals" 
+  - name: "Less Than the response Time"
+    key: "responseTime"
+    value: 1000
+    action: "lessThan"

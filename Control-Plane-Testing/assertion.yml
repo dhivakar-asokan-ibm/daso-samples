@@ -1,0 +1,17 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: ControlPlaneAssertions
+  version: 1.0
+  namespace: cp
+  tags:
+    - demo
+spec:
+  - name: "Validate the response status"
+    key: "code"
+    value: 200
+    action: "equals" 
+  - name: "Less Than the response Time"
+    key: "responseTime"
+    value: 1000
+    action: "lessThan"
