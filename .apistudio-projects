@@ -3,10 +3,6 @@ projects:
     description: Project for nested spec file
     tags:
       - dev
-  API_Testing:
-    description: ''
-    tags: []
-    lastUpdated: 1728297976679
   Aadhiran:
     description: Project for nested spec file
     tags:
