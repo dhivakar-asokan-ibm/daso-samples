@@ -1,20 +1,20 @@
 kind: test
 apiVersion: api.webmethods.io/beta
 metadata:
-  name: ControlPlaneSanity
-  version: 1.0
-  namespace: cp
+  name: API Gateway Health Check
+  version: "1.0"
+  namespace: daso
   tags:
     - demo
 spec:
   api:
-    $endpoint: https://devrealm3.apicp-aw-us.webmethods-dev.io
+    $endpoint: http://daso.dev.fyre.ibm.com:5555/rest/apigateway
   environment:
     $ref: cp:ControlPlaneEnvironment:1.0
 
   request:
     - method: GET
-      resource: /api/info
+      resource: /health/engine
       headers:
         - key: Content-Type
           value: ${content-type}
@@ -27,7 +27,7 @@ spec:
         sslVerification: false
         encodeURL: true
       assertions:
-        $ref: cp:ControlPlaneAssertions:1.0
+        $ref: global:default-assertions:1.0
     - method: GET
       resource: Untitled resource
       headers:
