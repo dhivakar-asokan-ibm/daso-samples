@@ -4,7 +4,8 @@ metadata:
   name: Dhivakar's Test
   namespace: daso
   version: '1.0'
-  tags: []
+  tags:
+    - test
 spec:
   api:
     $ref: 'daso:Dhivakar''s VCS Demo:1.0'
