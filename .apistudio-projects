@@ -12,3 +12,10 @@ projects:
     description: ''
     tags: []
     lastUpdated: 1743008110837
+  VCSDemo:
+    description: Project for trying out VCS operations
+    tags:
+      - demo
+      - vcs
+      - daso
+    lastUpdated: 1743153681564
