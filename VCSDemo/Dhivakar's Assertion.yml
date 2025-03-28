@@ -1,0 +1,13 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Dhivakar's Assertion
+  namespace: daso
+  version: '1.0'
+  tags:
+    - daso
+spec:
+  - name: Status code check
+    key: code
+    action: equals
+    value: "200"

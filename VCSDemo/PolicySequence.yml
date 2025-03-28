@@ -9,4 +9,6 @@ spec:
   transport:
     - $ref: daso:Transport Policy:1.0
   routing:
-    - $ref: daso:Routing Policy:1.0
+    - $ref: daso:RoutingPolicy:1.0
+  monitoring:
+    - $ref: daso:Logging:1.0

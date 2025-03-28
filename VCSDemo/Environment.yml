@@ -1,0 +1,12 @@
+kind: environment
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Dhivakar's Environment
+  namespace: daso
+  version: "1.0"
+  tags: []
+spec:
+  variables:
+    - key: content-type
+      isSecret: false
+      value: application/json

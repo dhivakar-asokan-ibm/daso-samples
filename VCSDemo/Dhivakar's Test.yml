@@ -1,0 +1,22 @@
+kind: test
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Dhivakar's Test
+  namespace: daso
+  version: '1.0'
+  tags: []
+spec:
+  api:
+    $ref: 'daso:Dhivakar''s VCS Demo:1.0'
+  environment:
+    $ref: 'daso:Dhivakar''s Environment:1.0'
+  request:
+    - method: GET
+      resource: /pet/1
+      headers:
+        - key: Content-Type
+          value: application/json
+      auth:
+        noauth: true
+      assertions:
+        $ref: "daso:Dhivakar's Assertion:1.0"

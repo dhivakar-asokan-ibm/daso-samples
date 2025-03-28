@@ -1,0 +1,19 @@
+kind: Log
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Logging
+  namespace: daso
+  version: '1.0'
+  tags:
+    - log
+spec:
+  logRequestHeaders: true
+  logRequestPayload: true
+  logResponseHeaders: true
+  logResponsePayload: true
+  compressPayloads: true
+  logGenerationFrequency: onsuccess
+  destination:
+    - dev_portals
+    - email:
+        - daso@ibm.com

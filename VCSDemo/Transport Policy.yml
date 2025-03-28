@@ -1,0 +1,12 @@
+kind: Transport
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Transport Policy
+  namespace: daso
+  version: '1.0'
+  tags:
+    - transport
+spec:
+  protocol:
+    - https
+    - http
