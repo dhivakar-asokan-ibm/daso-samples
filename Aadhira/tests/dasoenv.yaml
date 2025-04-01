@@ -8,16 +8,18 @@ metadata:
     - payEnv
 spec:
   variables:
-    - key: "content-type"
-      value: "application/json"
+    - key: content-type
+      value: application/json
       isSecret: false
-    - key: "dogname"
-      value: "tommy"
+    - key: dogname
+      value: tommy
       isSecret: false
-    - key: "method" 
-      value: "POST"
+    - key: method
+      value: POST
       isSecret: false
-    - key: "accept" 
-      value: "application/json"
+    - key: accept
+      value: application/json
       isSecret: false
-
+    - key: test
+      isSecret: true
+      value: test
