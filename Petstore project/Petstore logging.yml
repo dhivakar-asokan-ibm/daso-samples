@@ -1,0 +1,18 @@
+kind: Log
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore logging
+  namespace: petstore
+  version: '1.0'
+  tags:
+    - logging
+spec:
+  logRequestHeaders: true
+  logRequestPayload: true
+  logResponsePayload: true
+  logResponseHeaders: true
+  logGenerationFrequency: always
+  destination:
+    - self
+    - email:
+        - dhivakar.asokan@ibm.com

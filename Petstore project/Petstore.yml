@@ -1,0 +1,15 @@
+kind: api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore
+  namespace: petstore
+  version: '1.0'
+  tags:
+    - pet
+    - api
+  type: REST
+spec:
+  api-spec:
+    $path: Petstore-spec.yml
+  policy-sequence:
+    - $ref: petstore:Petstore policy sequence:1.0

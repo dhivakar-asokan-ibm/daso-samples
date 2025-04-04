@@ -1,0 +1,15 @@
+kind: PolicySequence
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore policy sequence
+  namespace: petstore
+  version: '1.0'
+  tags:
+    - pet-policy-sequence
+spec:
+  transport:
+    - $ref: petstore:Petstore transport:1.0
+  monitoring:
+    - $ref: petstore:Petstore logging:1.0
+  routing:
+    - $ref: petstore:Petstore routing:1.0

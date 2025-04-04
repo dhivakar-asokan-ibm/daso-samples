@@ -1,0 +1,12 @@
+kind: Transport
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore transport
+  namespace: petstore
+  version: '1.0'
+  tags:
+    - transport
+spec:
+  protocol:
+    - http
+    - https

@@ -1,0 +1,11 @@
+kind: HTTPEndpoint
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore endpoint
+  namespace: petstore
+  version: '1.0'
+  tags: []
+spec:
+  url: https://petstore3.swagger.io/api/v3/
+  connectTimeout: 0
+  method: CUSTOM
