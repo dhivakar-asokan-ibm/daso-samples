@@ -25,4 +25,4 @@ jobs:
       # tmp solution for wm path
       - name: Build API Studio project
         run: |
-          wm apim build -l ./ -o Demo.build.zip -d Demo
+          wm apim build -l ./ -o Aadhira.zip -d Aadhira
