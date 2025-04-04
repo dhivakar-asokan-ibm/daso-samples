@@ -1,0 +1,13 @@
+kind: environment
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Petstore environment
+  namespace: petstore
+  version: '1.0'
+  tags:
+    - environment
+spec:
+  variables:
+    - key: id
+      isSecret: false
+      value: "1"

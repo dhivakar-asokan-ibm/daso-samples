@@ -13,6 +13,7 @@ spec:
   logResponseHeaders: true
   logGenerationFrequency: always
   destination:
-    - self
     - email:
         - dhivakar.asokan@ibm.com
+    - api_gateway
+    - dev_portals
