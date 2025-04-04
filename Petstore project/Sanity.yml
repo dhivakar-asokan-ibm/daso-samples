@@ -7,9 +7,9 @@ metadata:
   tags: []
 spec:
   api:
-    $ref: 'petstore:Petstore:1.0'
+    $ref: petstore:Petstore:1.0
   environment:
-    $ref: 'petstore:Petstore environment:1.0'
+    $ref: petstore:Petstore environment:1.0
   request:
     - method: GET
       resource: /pet/${id}
@@ -19,4 +19,4 @@ spec:
       auth:
         noauth: true
       assertions:
-        $ref: "library:Library-BasicAssertion:1.0"
+        $ref: library:Library-BasicAssertion:1.0
