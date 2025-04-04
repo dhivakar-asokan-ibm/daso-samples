@@ -36,3 +36,7 @@ jobs:
       - name: Deploy
         run: |
           wm apim test "PetstoreProject" --localDir ./ --target "https://daso.apigw-aw-eu.webmethods.io/" --username "daso" --password "rtm.jta8YCJ7wpz8aux" -de
+       
+      - name: Cleanup
+        run: |
+          rm -rf "${{ github.workspace }}/studio/projects/Petstore.zip"
