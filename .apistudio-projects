@@ -29,3 +29,9 @@ projects:
       - development
       - petstore
     lastUpdated: 1743762999970
+  Assertion Library:
+    description: A common org level assertion library which can be reused across API
+    tags:
+      - assertions
+      - library
+    lastUpdated: 1743764712538
