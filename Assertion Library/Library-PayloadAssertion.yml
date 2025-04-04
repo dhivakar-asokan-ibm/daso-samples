@@ -1,0 +1,12 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Library-PayloadAssertion
+  namespace: library
+  version: '1.0'
+  tags: []
+spec:
+  - name: Payload validation
+    key: apiResponse.responseStatus
+    action: equals
+    value: SUCCESS

@@ -1,0 +1,24 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Library-BasicAssertion
+  namespace: library
+  version: '1.0'
+  tags: []
+spec:
+  - name: Response code check
+    key: code
+    action: equals
+    value: "200"
+  - name: Response time checks
+    key: responseTime
+    action: lessThan
+    value: "1000"
+  - name: Status message check
+    key: status
+    action: equals
+    value: OK
+  - name: Header check
+    key: header().Content-Type
+    action: equals
+    value: application/json; charset=UTF-8
