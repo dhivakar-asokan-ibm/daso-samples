@@ -23,3 +23,9 @@ projects:
     description: ''
     tags: []
     lastUpdated: 1743505314637
+  Petstore project:
+    description: A sample petstore project with basic sample set and tests
+    tags:
+      - development
+      - petstore
+    lastUpdated: 1743762999970
