@@ -24,7 +24,7 @@ jobs:
 
       - name: Build API Studio project
         run: |
-          wm apim build -l ./ -o Petstore.zip -d "Petstore project"
+          wm apim build -l ./ -o Petstore.zip -d "PetstoreProject"
 
       - name: Upload the build archive
         if: always()
@@ -35,4 +35,4 @@ jobs:
           
       - name: Deploy
         run: |
-          wm apim test "Petstore project" --localDir ./ --target "https://daso.apigw-aw-eu.webmethods.io/" --username "daso" --password "rtm.jta8YCJ7wpz8aux" -de
+          wm apim test "PetstoreProject" --localDir ./ --target "https://daso.apigw-aw-eu.webmethods.io/" --username "daso" --password "rtm.jta8YCJ7wpz8aux" -de
