@@ -1,0 +1,10 @@
+kind: Route
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Hydraroute
+  namespace: hydra
+  version: '1.0'
+  tags: []
+spec:
+  default-endpoint:
+    $ref: hydra:Hydraendpoint:1.0

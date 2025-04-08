@@ -1,0 +1,10 @@
+kind: HTTPEndpoint
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Hydraendpoint
+  namespace: hydra
+  version: '1.0'
+  tags: []
+spec:
+  url: https://swagger.io/api/v3
+  method: CUSTOM

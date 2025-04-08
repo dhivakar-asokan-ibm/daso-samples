@@ -1,0 +1,13 @@
+kind: api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: HydraAPI
+  namespace: hydra
+  version: '1.0'
+  tags: []
+  type: REST
+spec:
+  api-spec:
+    $path: HydraAPI-spec.json
+  policy-sequence:
+    - $ref: hydra:Hydrasequence:1.0

@@ -1,0 +1,20 @@
+kind: test
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Hydratest
+  namespace: hydra
+  version: '1.0'
+  tags: []
+spec:
+  api:
+    $ref: 'hydra:HydraAPI:1.0'
+  request:
+    - method: GET
+      resource: pet/11
+      headers:
+        - key: Content-Type
+          value: application/json
+      auth:
+        noauth: true
+      assertions:
+        $ref: "hydra:Hydraassertion:1.0"
