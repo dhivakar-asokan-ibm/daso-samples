@@ -1,0 +1,48 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Library-Petstore
+  namespace: Assertion Library
+  version: "1.0"
+  tags: []
+spec:
+  - name: Check the response has status
+    key: json()
+    value: "status"
+    action: haveProperty
+  - name: "Check the category id"
+    key: json().category[0].id
+    value: "11"
+    action: equals   
+  - name: "Check the pet name"
+    key: json().name
+    value: "calf"
+    action: equals   
+  - name: Check the total items greater than 1000
+    key: json().totalItems
+    value: 1
+    action: greaterThan
+  - name: Validate the response status
+    key: code
+    value: 200
+    action: equals
+  - name: Less Than the response Time
+    key: responseTime
+    value: 10000
+    action: lessThan
+  - name: Check status is ok
+    key: status
+    value: OK
+    action: equals
+  - key: header().Content-Type
+    value: application/text
+    action: notEquals
+    name: check the header reposne type is not text
+  - key: header().Access-Control-Allow-Origin
+    value: "test"
+    action: notEquals
+    name: Ensure that all the origins are allowed
+  - key: json().parameters.search
+    value: 1
+    action: lengthOf
+    name: Assertion to validate the parameter search size is 1
