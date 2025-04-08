@@ -24,12 +24,12 @@ jobs:
 
       - name: Build API Studio project
         run: |
-          wm apim build -l ./ -o Petstore.zip -d "PetstoreProject"
+          wm apim build -l ./ -o buildarchive.zip "Project Hydra"
           
       - name: Deploy
         run: |
-          wm apim test "PetstoreProject" --localDir ./ --target "https://daso.apigw-aw-eu.webmethods.io/" --username "daso" --password "rtm.jta8YCJ7wpz8aux" -de
+          wm apim deploy -l ./ -t "http://daso.dev.fyre.ibm.com:5555" -u "Administrator" -ow "Project Hydra"
        
-      - name: Cleanup
+      - name: Test
         run: |
-          rm -rf "${{ github.workspace }}/studio/projects/Petstore.zip"
+          wm apim test -l ./ -t "http://daso.dev.fyre.ibm.com:5555" -u "Administrator" --password "manage" -de "Project Hydra"
