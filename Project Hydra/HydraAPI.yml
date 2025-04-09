@@ -4,7 +4,8 @@ metadata:
   name: HydraAPI
   namespace: hydra
   version: '1.0'
-  tags: []
+  tags:
+    - pipeline
   type: REST
 spec:
   api-spec:
