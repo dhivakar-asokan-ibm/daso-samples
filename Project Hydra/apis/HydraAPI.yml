@@ -10,6 +10,6 @@ metadata:
   type: REST
 spec:
   api-spec:
-    $path: ./HydraAPI-spec.json
+    $path: ./HydraAPI-spec.yml
   policy-sequence:
     - $ref: hydra:Hydrasequence:1.0
