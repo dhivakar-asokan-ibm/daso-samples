@@ -27,7 +27,7 @@ jobs:
         run: |
           wm apim build -l ./ -o buildarchive.zip "Project Hydra"
         
-   Deploy-and-Test:
+   Test:
     name: Test APIs
     runs-on: ubuntu-latest
     needs: [Build]
@@ -47,5 +47,25 @@ jobs:
       - name: Run tests on the API Studio project
         run: |
          wm apim test -l ./ --deploy --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }} --password ${{ secrets.Gateway_Password }} --debug "Project Hydra"
+ 
+   Deploy:
+    name: Deploy API Studio project
+    runs-on: ubuntu-latest
+    needs: [Build, Test]
+    if: success()
+    steps:
+      - name: Check out projects
+        uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
+      - name: CLI installation
+        run: |
+          npm install -g @apistudio/apim-cli
           
+      - name: Deploy API Studio project
+        run: |
+          wm apim deploy -l ./ --target ${{ secrets.Prod_Gateway_URL }} --username ${{ secrets.Prod_Gateway_Username }} --password ${{ secrets.Prod_Gateway_Password }} --overwrite --debug "Project Hydra"
