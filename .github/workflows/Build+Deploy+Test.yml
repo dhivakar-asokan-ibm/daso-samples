@@ -26,9 +26,9 @@ jobs:
         run: |
           wm apim build -l ./ -o buildarchive.zip "Project Hydra"
           
-      - name: Deploy
-        run: |
-          wm apim deploy -l ./ --target "http://daso.dev.fyre.ibm.com:5555/" --username "Administrator" --password "manage" --overwrite --debug "Project Hydra"
+    #  - name: Deploy
+    #    run: |
+    #      wm apim deploy -l ./ --target "http://daso.dev.fyre.ibm.com:5555/" --username "Administrator" --password "manage" --overwrite --debug "Project Hydra"
        
       - name: Test
         run: |
