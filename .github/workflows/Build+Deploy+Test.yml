@@ -49,7 +49,7 @@ jobs:
           
       - name: Run tests on the API Studio project
         run: |
-         wm apim test -l ./ --deploy --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }} --password ${{ secrets.Gateway_Password }} --debug "Project Hydra"
+         wm apim test -l ./ --deploy --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }} --password ${{ secrets.Gateway_Password }} "Project Hydra"
  
    Deploy:
     name: Deploy API Studio project
@@ -71,4 +71,4 @@ jobs:
           
       - name: Deploy API Studio project
         run: |
-          wm apim deploy -l ./ --target ${{ secrets.Prod_Gateway_URL }} --username ${{ secrets.Prod_Gateway_Username }} --password ${{ secrets.Prod_Gateway_Password }} --overwrite --debug "Project Hydra"
+          wm apim deploy -l ./ --target ${{ secrets.Prod_Gateway_URL }} --username ${{ secrets.Prod_Gateway_Username }} --password ${{ secrets.Prod_Gateway_Password }} --overwrite "Project Hydra"
