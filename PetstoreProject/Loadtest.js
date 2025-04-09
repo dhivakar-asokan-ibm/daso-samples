@@ -20,7 +20,7 @@ export const options = {
 
 export default function () {
     const BASE_URL = 'https://daso.apigw-aw-eu.webmethods.io/gateway/CarbonAPI/1/';
-    const url = `${BASE_URL}/pet/1;
+    const url = `${BASE_URL}/pet/1`;
     const params = {
       headers: {
         'Accept': 'application/json',
