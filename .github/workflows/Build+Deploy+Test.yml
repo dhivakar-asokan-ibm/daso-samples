@@ -32,4 +32,4 @@ jobs:
        
       - name: Test
         run: |
-          wm apim test -l ./ --deploy --target "http://daso.dev.fyre.ibm.com:5555/" --username "Administrator" --password "manage" --debug "Project Hydra"
+                    wm apim test -l ./ --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }}--password ${{ secrets.Gateway_Password }} -deploy --debug "Project Hydra"
