@@ -34,7 +34,11 @@ jobs:
     steps:
       - name: Check out projects
         uses: actions/checkout@v4
-      
+        
+      - name: CLI installation
+        run: |
+          npm install -g @apistudio/apim-cli
+          
       - name: Run tests on the API Studio project
         run: |
          wm apim test -l ./ --deploy --target $ {{secrets.Gateway_URL }} --username ${{secrets.Gateway_Username }} --password ${{secrets.Gateway_Password}} --debug "Project Hydra"
