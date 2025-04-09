@@ -50,11 +50,25 @@ jobs:
       - name: Run tests on the API Studio project
         run: |
          wm apim test -l ./ --deploy --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }} --password ${{ secrets.Gateway_Password }} --debug "Project Hydra"
- 
+
+   Performance:
+    name: Run performance tests
+    runs-on: self-hosted
+    needs: [Build]
+    steps:
+      - name: Check out projects
+        uses: actions/checkout@v4
+
+      - name: Run local k6 test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: ./"Project Hydra"/tests /performance/Loadtest.js
+          flags: --out json=results.json
+
    Deploy:
     name: Deploy API Studio project
     runs-on: ubuntu-latest
-    needs: [Build, Test]
+    needs: [Build, Test,Performance]
     if: success()
     steps:
       - name: Check out projects
