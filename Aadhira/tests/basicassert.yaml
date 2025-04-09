@@ -9,7 +9,7 @@ metadata:
 spec:
   - name: "Validate the response status"
     key: "code"
-    value: 401
+    value: 200
     action: "equals" 
   - name: "Less Than the response Time"
     key: "responseTime"
