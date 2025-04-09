@@ -32,4 +32,6 @@ jobs:
        
       - name: Test
         run: |
-                    wm apim test -l ./ --deploy --target ${{ secrets.Gateway_URL }} --username ${{ secrets.Gateway_Username }} --password ${{ secrets.Gateway_Password }} --debug "Project Hydra"
+           wm apim test -l ./ --deploy --target "https://daso.apigw-aw-eu.webmethods.io" --username daso --password "rtm.jta8YCJ7wpz8aux" --debug "Project Hydra"
+
+          
