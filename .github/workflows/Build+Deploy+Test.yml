@@ -31,7 +31,7 @@ jobs:
           wm apim build -l ./ -o buildarchive.zip "Project Hydra"
         
    Test:
-    name: Test APIs
+    name: Run Functional tests
     runs-on: ubuntu-latest
     needs: [Build]
     steps:
