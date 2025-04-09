@@ -6,6 +6,7 @@ metadata:
   version: '1.0'
   tags:
     - demo
+    - test
   type: REST
 spec:
   api-spec:
