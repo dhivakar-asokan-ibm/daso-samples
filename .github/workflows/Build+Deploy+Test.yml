@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup:
+   Build:
+    name: Build project
     runs-on: ubuntu-latest
     steps:
       - name: Projects checkout
@@ -22,16 +23,20 @@ jobs:
         run: |
           npm install -g @apistudio/apim-cli
 
-      - name: Build API Studio project
+      - name: Build project
         run: |
           wm apim build -l ./ -o buildarchive.zip "Project Hydra"
-          
-    #  - name: Deploy
-    #    run: |
-    #      wm apim deploy -l ./ --target "http://daso.dev.fyre.ibm.com:5555" --username "Administrator" --password "manage" --overwrite --debug "Project Hydra"
-       
-      - name: Test
+        
+   Deploy-and-Test:
+    name: Test APIs
+    runs-on: ubuntu-latest
+    needs: [Build]
+    steps:
+      - name: Check out projects
+        uses: actions/checkout@v4
+      
+      - name: Run tests on the API Studio project
         run: |
-           wm apim test -l ./ --deploy --target "https://daso.apigw-aw-eu.webmethods.io" --username daso --password "rtm.jta8YCJ7wpz8aux" --debug "Project Hydra"
+         wm apim test -l ./ --deploy --target $ {{secrets.Gateway_URL }} --username ${{secrets.Gateway_Username }} --password ${{secrets.Gateway_Password}} --debug "Project Hydra"
 
           
