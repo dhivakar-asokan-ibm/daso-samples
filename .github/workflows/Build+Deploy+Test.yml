@@ -28,7 +28,7 @@ jobs:
           
     #  - name: Deploy
     #    run: |
-    #      wm apim deploy -l ./ --target "http://daso.dev.fyre.ibm.com:5555/" --username "Administrator" --password "manage" --overwrite --debug "Project Hydra"
+    #      wm apim deploy -l ./ --target "http://daso.dev.fyre.ibm.com:5555" --username "Administrator" --password "manage" --overwrite --debug "Project Hydra"
        
       - name: Test
         run: |
