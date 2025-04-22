@@ -8,5 +8,5 @@ metadata:
 spec:
   url: https://swagger.io/api/v3
   method: CUSTOM
-  connectTimeout: 400
+  connectTimeout: 500
   readTimeout: 300
